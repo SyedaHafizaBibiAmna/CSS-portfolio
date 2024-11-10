@@ -1,0 +1,133 @@
+body{
+    max-width: 1500px;
+    margin: auto;
+}
+
+.header-container{
+    width: 100%;
+    height: 400px;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(to right, #cec4d7, #9656be); /* Replace with your colors */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Make text color transparent so the gradient is visible */
+    font-weight: 800; /* Optional: Makes the text bold */
+    font-size: 3rem; /* Optional: Set the text size */
+  }
+  
+.header-boxes-con{
+    width: 80%;
+    height: 100%;
+    background-color: #33353F;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 10px 10px 30px gray;
+}
+.hero-right-div{
+    width: 50%;
+}
+.grid-container {
+    display:flex;
+    grid-template-columns: repeat(12, 1fr); /* 12 equal-width columns */
+    gap: 1rem; /* Optional gap between grid items */
+  }
+  .motion-item {
+    grid-column: span 4; /* Span across 4 columns */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 1rem; /* Add margin top for small screens */
+    animation: fadeInScale 0.5s ease-out; /* Apply animation */
+  }
+/* .image-container{
+    border-radius:10px;
+    width: 250px;
+    height: 250px ;
+} */
+.title-hero{
+    font-size: 30px;
+    font-family:  'Inter', sans-serif;
+    line-height: 40px;
+}
+.des-hero{
+    margin-top: 20px;
+    color: #ADB7BE;
+    padding-right: 5px;
+}
+.hero-btn{
+    border: none;
+
+    /* color: #ADB7BE; */
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgb(118, 93, 101);
+    
+}
+.hero-btn-link{
+    color:#ADB7BE;
+}
+
+.hero-btn:hover{
+  
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    color: rgb(147, 161, 202);
+    font-weight: 800;
+    text-decoration: underline;
+    overflow: hidden;
+  text-decoration: underline;
+}
+.image-container {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(118, 93, 101);
+    border-radius: 50%; /* Make the container circular */
+    position: relative; /* For absolute positioning of the image */
+    transition: all 0.5s ease; /* Transition for smooth resize */
+  }
+@media screen and (min-width:100px) and (max-width:750px) {
+    .header-boxes-con{
+        width: 100%;
+        flex-direction: column;
+       
+    } 
+    .motion-item {
+        margin-top: 0; /* Remove margin top for large screens */
+      }
+    .image-container{
+        width: 250px;
+        height: 250px;
+        background-color:rgb(118, 93, 101);
+        border-radius: 50%; /* Make the container circular */
+        position: relative; /* For absolute positioning of the image */
+        transition: all 0.5s ease;
+        
+    }
+    .hero-right-div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .title-hero{
+        font-size: 20px;
+        padding-left: 30px;
+        font-family:  'Inter', sans-serif;
+        line-height: 28px;
+        text-align: left;
+        justify-self: start;
+    }
+    .des-hero{
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+}
